@@ -18,7 +18,7 @@
 
 # Usar o computador Docker com o driver do Azure
 
-O [Docker](https://www.docker.com/) é uma das abordagens de virtualização mais populares que utiliza contêineres Linux em vez de máquinas virtuais como forma de isolar dados de aplicativo e computar recursos compartilhados. Este tópico descreve quando e como usar o [Docker machine](https://docs.docker.com/machine/) (o comando `docker-machine`) para criar novas VMs do Linux no Azure habilitado como um host do Docker para os contêineres do Linux.
+O [Docker](https://www.docker.com/) é uma das abordagens de virtualização mais populares que utiliza contêineres Linux em vez de máquinas virtuais como forma de isolar dados de aplicativo e computar recursos compartilhados. Este tópico descreve quando e como usar o [Docker Machine](https://docs.docker.com/machine/) (o comando `docker-machine`) para criar novas VMs do Linux no Azure habilitado como um host do Docker para os contêineres do Linux.
 
 
 ## Criar VMs com o computador Docker
@@ -78,7 +78,7 @@ Agora, digite `docker-machine env <VM name>` para ver o que você precisa fazer 
 docker-machine env machine
 ```
 
-Esse comando imprime as informações de ambiente do seu contêiner,a saída deve ser parecidas com as abaixo. Observe que o endereço IP que foi atribuído pois você precisará para testar a VM.
+Esse comando imprime as informações de ambiente do seu contêiner. A saída deve ser parecida com a imagem a seguir. Observe que o endereço IP que você precisará para testar a VM foi atribuído.
 
 ```
 export DOCKER_TLS_VERIFY="1"
