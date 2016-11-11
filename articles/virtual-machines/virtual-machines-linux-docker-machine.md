@@ -18,7 +18,7 @@
 
 # Usar o computador Docker com o driver do Azure
 
-O [Docker](https://www.docker.com/) é uma das abordagens de virtualização mais populares que utiliza contêineres Linux em vez de máquinas virtuais como forma de isolar dados de aplicativo e computar recursos compartilhados. Este tópico descreve quando e como usar o [computador Docker](https://docs.docker.com/machine/) (o comando `docker-machine`) para criar novas VMs do Linux no Azure habilitado como um host do Docker para os contêineres do Linux.
+O [Docker](https://www.docker.com/) é uma das abordagens de virtualização mais populares que utiliza contêineres Linux em vez de máquinas virtuais como forma de isolar dados de aplicativo e computar recursos compartilhados. Este tópico descreve quando e como usar o [Docker machine](https://docs.docker.com/machine/) (o comando `docker-machine`) para criar novas VMs do Linux no Azure habilitado como um host do Docker para os contêineres do Linux.
 
 
 ## Criar VMs com o computador Docker
@@ -27,7 +27,7 @@ Crie VMs de host do Docker no Azure com o comando `docker-machine create` usando
 
 O exemplo a seguir conta com os valores padrão, mas abre a porta 80 na VM com a Internet para testar com um contêiner nginx, criar o usuário de logon `ops` para o SSH e chamar a nova VM `machine`.
 
-Digite `docker-machine create --driver azure` para ver as opções e seus valores padrão; você também pode ler a [documentação do Docker Azure Driver](https://docs.docker.com/machine/drivers/azure/). (Observe que, se a autenticação de dois fatores estiver habilitada, você deverá autenticar usando o segundo fator).
+Digite `docker-machine create --driver azure` para ver as opções e seus valores padrão; você também pode ler a [documentação do Docker Azure Driver](https://docs.docker.com/machine/drivers/azure/). (Observe que, se a autenticação em dois fatores estiver habilitada, você deverá autenticar usando o segundo fator).
 
 ```bash
 docker-machine create -d azure \
@@ -37,7 +37,7 @@ docker-machine create -d azure \
   machine
 ```
 
-Dependendo de a autenticação de dois fatores estar configurada em sua conta, a saída deverá se parecer com o seguinte.
+Dependendo de se a autenticação em dois fatores estar configurada em sua conta, a saída deverá se parecer com o seguinte.
 
 ```
 Creating CA: /Users/user/.docker/machine/certs/ca.pem
@@ -78,7 +78,7 @@ Agora, digite `docker-machine env <VM name>` para ver o que você precisa fazer 
 docker-machine env machine
 ```
 
-Isso imprime as informações de ambiente, que são parecidas com essas. Observe que o endereço IP, que você precisará para testar a VM, foi atribuído.
+Esse comando imprime as informações de ambiente do seu contêiner,a saída deve ser parecidas com as abaixo. Observe que o endereço IP que foi atribuído pois você precisará para testar a VM.
 
 ```
 export DOCKER_TLS_VERIFY="1"
@@ -130,6 +130,6 @@ E verifique o contêiner em execução, digite `docker-machine ip <VM name>` par
 
 Se estiver interessado, você poderá experimentar a [extensão de VM do Docker](virtual-machines-linux-dockerextension.md) do Azure para fazer a mesma operação usando a CLI do Azure ou os modelos do Azure Resource Manager.
 
-Para ver mais exemplos de trabalho com o Docker, consulte [Working with Docker](https://github.com/Microsoft/HealthClinic.biz/wiki/Working-with-Docker) (Trabalhando com o Docker) na [demonstração](https://blogs.msdn.microsoft.com/visualstudio/2015/12/08/connectdemos-2015-healthclinic-biz/) do [HealthClinic.biz](https://github.com/Microsoft/HealthClinic.biz) no Connect 2015. Para ver mais guias de início rápido da demonstração do HealthClinic.biz, consulte [Azure Developer Tools Quickstarts](https://github.com/Microsoft/HealthClinic.biz/wiki/Azure-Developer-Tools-Quickstarts) (Guias de início rápido das ferramentas de desenvolvedor do Azure).
+Para ver mais exemplos de trabalho com o Docker, consulte [Trabalhando com o Docker](https://github.com/Microsoft/HealthClinic.biz/wiki/Working-with-Docker)  na [demonstração](https://blogs.msdn.microsoft.com/visualstudio/2015/12/08/connectdemos-2015-healthclinic-biz/) do [HealthClinic.biz](https://github.com/Microsoft/HealthClinic.biz) no Connect 2015. Para ver mais guias de início rápido da demonstração do HealthClinic.biz, consulte [Azure Developer Tools Quickstarts](https://github.com/Microsoft/HealthClinic.biz/wiki/Azure-Developer-Tools-Quickstarts) (Guias de início rápido das ferramentas de desenvolvedor do Azure).
 
 <!---HONumber=AcomDC_0727_2016-->
