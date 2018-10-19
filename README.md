@@ -13,21 +13,21 @@ Obrigado por seu interesse na documentação do Azure.
 * [Organização do repositório](#repository-organization)
 * [Usar o GitHub, o Git e este repositório](#use-github-git-and-this-repository)
 * [Como usar a redução para formatar seu tópico](#how-to-use-markdown-to-format-your-topic)
-* [Mais recursos](#Mais recursos)
+* [Mais recursos](#mais-recursos)
 * [Índice de todos os artigos do guia do colaborador](https://github.com/Azure/azure-content/blob/master/contributor-guide/contributor-guide-index.md) (abre uma nova página)
 
 ## Maneiras de contribuir
 
 Você pode contribuir com facilidade para artigos técnicos na interface do usuário do GitHub. Localize o artigo neste repositório ou visite o artigo em [http://azure.microsoft.com/documentation](http://azure.microsoft.com/documentation) e clique no link no artigo para a fonte do GitHub do artigo.
 
-##Sobre as suas contribuições ao conteúdo do Azure
+## Sobre as suas contribuições ao conteúdo do Azure
 
-###Correções secundárias
+### Correções secundárias
 
 As correções secundárias ou esclarecimentos enviados para a documentação e os exemplos de código neste repositório são cobertos pelos [Termos de uso do site do Azure (ToU)](http://azure.microsoft.com/support/legal/website-terms-of-use/).
 
 
-###Envios maiores
+### Envios maiores
 
 Se você enviar uma solicitação de pull com alterações significativas ou novas para a documentação e para os exemplos de código, enviaremos um comentário para o GitHub solicitando o envio de um Contrato de Licença de Contribuição (CLA) online caso você esteja em um destes grupos:
 
